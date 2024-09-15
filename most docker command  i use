@@ -1,0 +1,9 @@
+   docker rmi -f perpusbelajar                                                        >> untuk melakukan delete docker images dengan nama perpusbelajar
+   docker ps                                                                          >> untuk melihat container yang running    
+   history | grep docker                                                              >> untuk melihat hostory dengan kata kunci docker
+   docker exec -ti node-app-v3 sh                                                     >> untuk melakukan exec atau mendapatkan akses terminal pada container dengan nama container node-app-v3
+   docker cp node-app-v3:/app .                                                       >> untuk melakukan copy file dari container dengan nama node-app-v3 didalam dir /app ke host machine di directory saat ini karena hanya menggunakan . (titik)
+   docker images                                                                      >> untuk melakukan list images
+   docker stop node-app-v4                                                            >> untuk stop container dengan nama node-app-v4
+   docker remove node-app-v4                                                          >> untuk delete container dengan nama node-app-v4
+   docker run --name node-app-v4 -d -p 8001:8000 -v ./app:/app anta-node:v3           >> untuk menjalankan container dengan nama node-app-v4 di port 8001 pada host machine dan 8000 pada container dan attach dir /app ke /app pada container dengan imaage anta-node-v3
